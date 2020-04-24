@@ -1,0 +1,126 @@
+\newcounter{runidnum}
+\newcommand{\runid}{\stepcounter{runidnum}\#\therunidnum}
+\newcommand{\resetrunid}{\setcounter{runidnum}{0}}
+\newcommand\accnum[1]{\num[round-precision=3]{#1}}
+
+\newcommand\ihfig[2]{
+\includegraphics[totalheight=#1]{#2}}
+
+\newcommand\hfig[2]{
+\ifshowfigs\includegraphics[totalheight=#1]{#2}\fi}
+
+\newcommand\iwfig[2]{
+\includegraphics[width=#1]{#2}}
+
+\newcommand\wfig[2]{
+\ifshowfigs\includegraphics[width=#1]{#2}\fi}
+
+\newcommand\animhfig[3]{
+%\ifshowfigs\animategraphics[height=#1,autoplay,palindrome]{#2}{#3}{2}{2}\fi}
+%\ifshowfigs\animategraphics[height=#1,autoplay,loop]{#2}{#3}{2}{2}\fi}
+\ifshowanim\animategraphics[height=#1,autoplay,loop]{#2}{#3}{2}{2}\fi}
+
+\newcommand\animwfig[5]{
+%\ifshowfigs\animategraphics[width=#1,autoplay,palindrome]{#2}{#3}{#4}{#5}\fi}
+%\ifshowfigs\animategraphics[width=#1,autoplay,loop]{#2}{#3}{#4}{#5}\fi}
+\ifshowanim\animategraphics[width=#1,autoplay,loop]{#2}{#3}{#4}{#5}\fi}
+
+
+
+
+
+
+
+%///////////////////////////////////////////////
+% MACROS FOR MATH
+%///////////////////////////////////////////////
+%\newcommand{\defeq}{\ensuremath{\mathrel{:\mkern-0.25mu=}}}
+%\newcommand{\eqdef}{\ensuremath{\mathrel{=\mkern-0.25mu:}}}
+\newcommand{\defeq}{\ensuremath{\coloneqq}}
+\newcommand{\eqdef}{\ensuremath{\eqqcolon}}
+
+\newcommand{\real}{\ensuremath{\operatorname{Re}}}
+\newcommand{\imag}{\ensuremath{\operatorname{Im}}}
+
+% math operators
+\newcommand{\F}[1]{\ensuremath{\mathcal{#1}}}    % functional
+\newcommand{\D}[1]{\ensuremath{\mathcal{#1}}}    % differential operator
+%\newcommand{\idiv}{\ensuremath{\nabla\cdot}}
+\newcommand{\idiv}{\ensuremath{\operatorname{div}}}
+\newcommand{\igrad}{\ensuremath{\nabla}}
+\newcommand{\ilap}{\rotatebox[origin=c]{180}{$\nabla$}}
+\newcommand{\icurl}{\ensuremath{\nabla \times}}
+\newcommand{\tr}{\ensuremath{\operatorname{tr}}}
+\newcommand{\ijac}{\ensuremath{\bar{\nabla}}}  % jacobian
+\newcommand{\fun}[1]{\ensuremath{\mathcal{#1}}}
+\newcommand{\dop}[1]{\ensuremath{\mathcal{#1}}}
+\newcommand{\ad}{\ensuremath{\text{ad}}}
+\newcommand{\id}{\ensuremath{\text{id}}}
+\newcommand{\p}{\partial}
+
+
+\DeclareMathOperator*{\minopt}{\text{minimize}}
+\DeclareMathOperator*{\argmin}{\text{arg\,min}}
+\newcommand{\st}{\ensuremath{\text{subject to}}}
+\newcommand{\dist}{\ensuremath{\text{dist}}}
+\newcommand{\diff}{\ensuremath{\text{diff}}}
+\newcommand{\fapp}{\ensuremath{\!\cdot\!}}
+
+
+% number sets
+%\newcommand{\ns}[1]{\ensuremath{\mathbf{#1}}}
+\newcommand{\ns}[1]{\ensuremath{\mathbb{#1}}}
+\newcommand{\fs}[1]{\ensuremath{\mathcal{#1}}}
+%\newcommand{\fs}[1]{\ensuremath{\mathfrak{#1}}}
+
+
+
+\newcommand{\T}{\ensuremath{\intercal}} % transpose
+\newcommand{\adj}{\ensuremath{\mathsf{H}}} % adjugate
+
+\renewcommand{\d}[1]{\,\text{d}#1}
+\newcommand{\dt}{\d{t}}
+\newcommand{\dx}{\d{\vect{x}}}
+
+\newcommand{\half}[1]{\frac{#1}{2}}
+\newcommand{\bigo}{\mathcal{O}}
+\newcommand{\bigO}{\mathcal{O}}
+
+% vector, matrices
+\newcommand{\vect}[1]{\boldsymbol{#1}} % vector
+\newcommand{\mat}[1]{\boldsymbol{#1}}  % matrix
+\newcommand{\di}[1]{\mathbf{#1}}  % discrete operator
+\newcommand{\dig}[1]{\boldsymbol{#1}}  % discrete operator
+
+
+% highlight text
+\newcommand{\acr}[1]{{\bf #1}}
+\newcommand{\ipoint}[1]{\textit{\textbf{#1}}:}
+\newcommand{\iname}[1]{\emph{#1}}
+\newcommand{\iemph}[1]{\emph{#1}}
+\newcommand{\iquote}[1]{`'{\it #1}`'}
+
+
+% for tables
+\newcommand{\tabadjust}{\centering\scriptsize\renewcomman\arraystretch{1.2}}
+\newcommand{\mcol}[2]{\multicolumn{#1}{r}{#2}}
+\newcommand{\mrow}[2]{\multirow{#1}{*}{#2}}
+\newcommand{\mrowrot}[2]{
+\parbox[t]{2mm}{\multirow{#1}{*}{\rotatebox[origin=c]{90}{#2}}}
+}
+\newcolumntype{R}{>{\columncolor{gray!20}}r}
+\newcolumntype{L}{>{\columncolor{gray!20}}l}
+\newcolumntype{C}{>{\columncolor{gray!20}}c}
+
+
+% for algorithms
+\newcommand{\sw}[1]{{\tt  #1}}
+\newcommand{\ccomment}[1]{{\hfill\color{gray} $\rhd$\,#1}}
+\newcommand{\ecomment}[1]{{\hfill\text{\color{gray}$\rhd$\,#1}}}
+\newcommand{\cchlight}{{\hfill\color{red} $(\star)$}}
+
+
+% comment
+\renewcommand\frown{{\color{p1color}\faFrownO}}
+\renewcommand\smile{{\color{p1color}\faSmileO}}
+\newcommand\whocares{{\color{p1color}\faMehO}}
