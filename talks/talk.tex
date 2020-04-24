@@ -1,0 +1,59 @@
+\documentclass[mathserif,20pt,xcolor=table,compress,aspectratio=169]{beamer}
+
+\def\titleskip{4.5cm}
+\def\teaserypos{1.85cm}
+
+\input{template}
+%\input{macros}
+
+%\finaltrue
+%\showfigstrue
+%\showanimtrue
+
+\setbeamerfont{title}{family=\sffamily\bfseries,size=\normalsize}
+\setbeamerfont{author}{family=\sffamily,size=\small}
+\setbeamerfont{institute}{family=\sffamily,size=\scriptsize}
+\setbeamerfont{date}{family=\sffamily,size=\tiny}
+
+\title[]{Title of the Talk}
+\author[]{Authors}
+\institute[]{Department of Mathematics, University of Houston}
+\date[]{}
+
+\begin{document}
+%/////////////////////////////////////////////////////////////
+\begin{frame}[plain,label=mytitlepage]
+\titlepage
+\end{frame}
+%/////////////////////////////////////////////////////////////
+
+
+\addtolength{\headsep}{-0.28cm}
+
+\begin{frame}{Title of Frame}
+\begin{itemize}
+\item Point 1
+\item Point 2
+\item Point 3
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Title of Frame}
+\begin{columns}
+\column[c]{0.5\textwidth}
+\[
+f(x) = 2x^2
+\]
+\column[c]{0.5\textwidth}
+\begin{itemize}
+\item Point 1
+\item Point 2
+\item Point 3
+\end{itemize}
+\end{columns}
+\end{frame}
+
+
+
+\end{document}

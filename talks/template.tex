@@ -1,0 +1,233 @@
+% include some packages
+\usepackage[T1]{fontenc}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{amsmath,mathtools,mathdots}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{pdfsync}
+\usepackage{tikz}
+\usepackage{cancel}
+\usepackage{nicefrac}
+\usepackage{multirow}
+\usepackage{algorithmic}
+%\usepackage[sc]{mathpazo}
+%\usepackage{tgpagella}
+%\usepackage[scaled=0.85]{DejaVuSans}
+\usepackage{cmbright}
+\renewcommand{\arraystretch}{0.9}
+\usepackage{animate}
+\usepackage{calc,amsmath}
+\usepackage{booktabs}
+\usepackage[sort,compress]{cite}
+\usepackage{cleveref}
+\usepackage{siunitx}
+\usepackage{setspace}
+\usepackage{fontawesome}
+%\usepackage[maxnames=1]{biblatex}
+%\usepackage[orientation=landscape,size=custom,width=16,height=9,debug]{beamerposter}
+\graphicspath{{figures/}{logos/}}
+
+
+\newif\iffinal
+\newif\ifshowfigs
+\newif\ifshowanim
+\newif\ifappendix
+
+% allows to use same footnote number twice
+\crefformat{footnote}{#2\footnotemark[#1]#3}
+
+\sisetup{round-precision=2,
+round-mode=figures,
+scientific-notation=true,
+output-exponent-marker = \text{e}}
+
+% neutral COLORS
+%\definecolor{p1color}{RGB} { 51,  63,  72} % black
+%\definecolor{p2color}{RGB} { 51,  63,  72} % black
+%\definecolor{s1color}{RGB} {  0,  95, 134} % dark blue
+%\definecolor{s2color}{RGB} {  0,  95, 134} % dark blue
+%\definecolor{t1color}{RGB} {  0, 169, 183} % bright blue
+
+% define UH COLORS
+\definecolor{p1color}{RGB} {200,  16,  46} % red
+\definecolor{p2color}{RGB} {  0, 179, 136} % teal
+\definecolor{p3color}{RGB} {246, 190,   0} % gold
+\definecolor{p4color}{RGB} {136, 139, 141} % gray
+\definecolor{p5color}{RGB} {255, 249, 217} % cream
+\definecolor{p6color}{RGB} { 51, 102, 155} % ocean
+
+\definecolor{s1color}{RGB} {150,  12,  34} % brick
+\definecolor{s2color}{RGB} {  0, 134, 108} % green
+\definecolor{s3color}{RGB} {216, 155,   0} % mustard
+\definecolor{s4color}{RGB} { 84,  88,  90} % slate
+
+\definecolor{t1color}{RGB} {100,   8,  23} % chocolate
+\definecolor{t2color}{RGB} {  0,  89,  80} % fores
+\definecolor{t3color}{RGB} {185, 120,   0} % ocher
+\definecolor{t4color}{RGB} {  0,   0,   0} % black
+
+% set up theme and add corresponding colors to it
+\usetheme[slogan=false]{Boadilla}
+\useoutertheme{split}
+% \usefonttheme[onlymath]{serif}
+% \usefonttheme{serif}
+\setbeamercovered{invisible}
+
+
+
+% font size
+%\setbeamerfont{title}{family=\sffamily\bfseries,size=\large}
+\setbeamerfont{title}{family=\sffamily\bfseries,size=\normalsize}
+%\setbeamerfont{title}{family=\sffamily\bfseries,size=\small}
+%\setbeamerfont{subtitle}{family=\sffamily,size=\scriptsize}
+\setbeamerfont{subtitle}{family=\sffamily,size=\small}
+%\setbeamerfont{subtitle}{family=\sffamily,size=\normalsize}
+\setbeamerfont{frametitle}{family=\bfseries\sffamily,size=\large}
+\setbeamerfont{frame subtitle}{size=\large}
+\setbeamerfont{block title}{family=\sffamily}
+\setbeamerfont{section}{family=\bfseries\sffamily,size=\large}
+\setbeamerfont{section title}{family=\bfseries\sffamily,size=\Large}
+\setbeamerfont{subsection}{family=\bfseries\sffamily,size=\large}
+\setbeamerfont{subsection title}{family=\bfseries\sffamily,size=\Large}
+%\setbeamerfont{author}{family=\sffamily,size=\scriptsize}
+\setbeamerfont{author}{family=\sffamily,size=\small}
+\setbeamerfont{date}{family=\sffamily,size=\tiny}
+%\setbeamerfont{institute}{family=\sffamily\itshape,size=\tiny}
+\setbeamerfont{institute}{family=\sffamily\itshape,size=\scriptsize}
+\renewcommand{\footnotesize}{\tiny}
+%\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+
+%\setbeamersize{text margin left=8pt,text margin right=8pt}
+
+% remove stuff
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{\small\hfill\color{gray}\bf\insertframenumber\hspace{-1cm}\vspace{0.2cm}}
+%\setbeamertemplate{footline}{\hfill\tiny\color{gray}\bf\insertframenumber\hspace{-0.5cm}\vspace{-0.2cm}}
+\setbeamertemplate{headline}[default]
+%\renewcommand\footnotemark{}
+\renewcommand\footnoterule{}
+
+\defbeamertemplate{section page}{mysec}[1][]{%
+  \begin{centering}
+    {\usebeamerfont{section name}\usebeamercolor[fg]{section name}#1}
+    \vskip1em\par
+    \begin{beamercolorbox}[sep=12pt,center]{part title}
+      \usebeamerfont{section title}\insertsection\par
+    \end{beamercolorbox}
+  \end{centering}
+}
+\setbeamertemplate{section page}[mysec]
+
+
+\defbeamertemplate{subsection page}{mysubsec}[1][]{%
+  \begin{centering}
+    \vskip1em\par
+    {\usebeamerfont{subsection name}\usebeamercolor[fg]{subsection name}#1}
+    \begin{beamercolorbox}[sep=12pt,center]{subsection title}
+      \usebeamerfont{subsection title}\insertsubsection\par
+    \end{beamercolorbox}
+  \end{centering}
+}
+
+\setbeamertemplate{subsection page}[mysubsec]
+%\setbeamertemplate{itemize items}[triangle]
+\setbeamertemplate{itemize items}{\raisebox{0.1ex}{\small$\blacktriangleright$}\hskip0.1em}
+ \setlength{\itemindent}{0em}
+
+%\setbeamercolor{normal text}{bg=white,fg=utblack}
+\setbeamercolor{normal text}{bg=white,fg=black}
+%\setbeamercolor{normal text}{bg=white,fg=black!70}
+\setbeamercolor{structure}{fg=p1color}
+\setbeamercolor{alerted text}{fg=p1color}
+\setbeamercolor{item projected}{use=item,fg=black,bg=item.fg!35}
+\setbeamercolor*{palette primary}{use=structure,fg=white,bg=p1color}
+\setbeamercolor*{part title}{use=structure,fg=white,bg=p1color}
+\setbeamercolor*{palette secondary}{use=structure,bg=s1color}
+%\setbeamercolor*{palette secondary}{use=structure,bg=black!80}
+%\setbeamercolor*{palette tertiary}{use=structure,bg=utsecgreen}
+\setbeamercolor*{palette tertiary}{use=structure,bg=tertiarycolor}
+%\setbeamercolor*{palette quaternary}{use=structure,fg=white,bg=utsecblue}
+%\setbeamercolor*{framesubtitle}{fg=utbrown}
+\setbeamercolor*{block title}{parent=structure,fg=white,bg=s1color}
+\setbeamercolor*{block body}{fg=black,bg=p4color!10}
+\setbeamercolor*{block title alerted}{parent=alerted text,bg=black!15}
+\setbeamercolor*{block title example}{parent=example text,bg=black!15}
+\setbeamercolor*{title}{parent=palette primary}
+
+
+% modify layout of footnotes (to make multi line references look nicer)
+\makeatletter
+\renewcommand<>\beamer@framefootnotetext[1]{
+\global\setbox\beamer@footins
+\vbox{
+\hsize\framewidth
+\textwidth\hsize
+\columnwidth\hsize
+\unvbox\beamer@footins
+\reset@font\footnotesize
+\@parboxrestore
+\protected@edef\@currentlabel
+{\csname p@footnote\endcsname\@thefnmark}
+\color@begingroup
+\uncover#2{\@makefntext{
+\rule\z@\footnotesep\ignorespaces\parbox[t]{.9\textwidth}
+{\raggedright#1\@finalstrut\strutbox}\vskip1sp}}
+\color@endgroup}}
+\makeatother
+
+\setbeamertemplate{footnote}{
+\parindent0em\noindent
+\raggedright
+\usebeamercolor{footnote}
+\hbox to 0.8em{\hfil\insertfootnotemark}
+\insertfootnotetext\par}
+
+% logo
+\pgfdeclareimage[height=0.7cm]{uhmathlogo}{logos/nsm-mathematics-secondary}
+
+
+\setbeamertemplate{title page}{
+\begin{textblock*}{\textwidth}(0.6cm,\teaserypos)
+\centering{
+%\ifshowanim
+\begin{flushleft}
+\includegraphics[totalheight=3.5cm]{example-image-golden}
+\end{flushleft}
+%\fi
+}
+\end{textblock*}
+
+\begin{centering}
+\begin{beamercolorbox}[sep=4pt,center,rounded=true,shadow=true]{title}
+{\usebeamerfont{title}\inserttitle\par}
+%\vskip0.3em\par
+{\usebeamerfont{subtitle}\insertsubtitle\par}
+\end{beamercolorbox}
+\end{centering}
+\null\vskip\titleskip\par
+\begin{beamercolorbox}[sep=2pt,left]{institute}
+{\usebeamerfont{author}\insertauthor\par}
+\vskip0.05cm
+{\usebeamerfont{institute}\insertinstitute\par}
+\vskip0.3cm
+{\usebeamerfont{date}\insertdate\par}
+\end{beamercolorbox}
+\begin{textblock*}{\textwidth}(14cm,7cm)
+\includegraphics[totalheight=1.5cm]{university-of-houston}
+\end{textblock*}
+}
+
+
+%\setbeamertemplate{bibliography item}{\insertbiblabel}
+\setbeamertemplate{bibliography item}{}
+\setbeamerfont{bibliography item}{size=\footnotesize}
+\setbeamerfont{bibliography entry author}{size=\footnotesize}
+\setbeamerfont{bibliography entry title}{size=\footnotesize}
+\setbeamerfont{bibliography entry location}{size=\footnotesize}
+\setbeamerfont{bibliography entry note}{size=\footnotesize}
+
+\setbeamertemplate{button}{\tikz
+\node[inner xsep=4pt,
+draw=structure!80,
+fill=structure!50,
+rounded corners=4pt]{\insertbuttontext};}

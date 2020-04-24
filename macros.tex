@@ -26,7 +26,35 @@
 \ifshowanim\animategraphics[width=#1,autoplay,loop]{#2}{#3}{#4}{#5}\fi}
 
 
+%///////////////////////////////////////////////
+% FOR TALKS (MOVE LATER TO SEPARATE FILE)
+%///////////////////////////////////////////////
+% footnote without number
+\newcommand\blfootnote[1]{
+\begingroup
+\renewcommand\thefootnote{}\footnote{#1}
+\addtocounter{footnote}{-1}
+\endgroup}
 
+
+\newcommand\fncite[1]{
+\begin{flushleft}
+\begin{textblock*}{0.95\textwidth}(3mm,80mm)
+%\begin{textblock*}{\textwidth}(3mm,85mm)
+%\tiny\color{darkgray}#1
+{\begin{spacing}{1}\tiny\color{s1color}#1\end{spacing}}
+\end{textblock*}
+\end{flushleft}
+}
+
+
+\newcommand\ifoot[1]{
+\begin{flushleft}
+\begin{textblock*}{0.95\textwidth}(3mm,80mm)
+{\begin{spacing}{1}\tiny\color{darkgray}#1\end{spacing}}
+\end{textblock*}
+\end{flushleft}
+}
 
 
 
