@@ -1,0 +1,74 @@
+\documentclass[11pt,twoside]{book}
+
+\usepackage{uhthesis}
+\input{macros.tex}
+
+\addbibresource{refs.bib}
+
+% if you want to add a glossary
+%\input glossary.tex
+%\makeglossaries
+
+% meta information
+\title{Title of Thesis}
+\author{Author Name}
+
+\chair{Prof.~Dr. First Last}
+\chairdept{Department, University}
+
+%\cochair{Prof.~Dr. First Last}
+%\cochairdept{Department, University}
+
+\cmemA{Prof.~Dr. First Last}
+\cmemAdept{Department, University}
+
+\cmemB{Prof.~Dr. First Last}
+\cmemBdept{Department, University}
+
+%\cmemC{Prof.~Dr. First Last}
+%\cmemCdept{Department, University}
+
+%\cmemD{Prof.~Dr. First Last}
+%\cmemDdept{Department, University}
+
+
+\begin{document}
+\pagestyle{fancy}
+%/////////////////////////// FRONT MATTER ////////////////////////////////
+\resetpage{roman}{lastfront}
+\maketitle
+\input cpt_frontmatter
+\label{lastfront}
+\newpage
+%/////////////////////////// FRONT MATTER ////////////////////////////////
+
+
+
+
+%/////////////////////////// MAIN MATTER /////////////////////////////////
+\resetpage{arabic}{lastmain}
+\input cpt_intro
+%\input cpt_xx
+%\input cpt_xx
+%\input cpt_xx
+%\input cpt_xx
+\label{lastmain}
+\newpage
+%/////////////////////////// MAIN MATTER /////////////////////////////////
+
+
+
+
+%/////////////////////////// BACK MATTER /////////////////////////////////
+\resetpage{roman}{lastback}
+
+% uncomment to add glossary
+%\glsaddall
+%\printglossary[type=symbolslist]
+
+% bibliography
+\printbibliography
+\label{lastback}
+%/////////////////////////// BACK MATTER /////////////////////////////////
+
+\end{document}

@@ -1,0 +1,51 @@
+\chapter{Introduction}
+
+
+If you are interested in learning more about \LaTeX\ the following reference is a great resource:~\cite{Oetiker:2018a}. Below are some brief examples on how to typeset mathematics (see \secref{s:type-math}) and floats (see \secref{s:type-floats}).
+
+
+
+\section{Typesetting Mathematics}
+\label{s:type-math}
+
+Next we will go over some basic examples on how to write equations.
+\begin{equation}
+f(x) = 2x.
+\end{equation}
+
+Let $\Omega\subset\mathbb{R}^n$ denote the spatial domain with closure $\bar{\Omega}$ and boundary $\partial\Omega$, and let $[0,1]\subset\mathbb{R}$ be a given time interval. We seek a function $u : \bar{\Omega} \times [0,1]\to \mathbb{R}$ defined on the space time interval $\bar{\Omega} \times [0,1]$ such that
+\begin{align}
+\partial_t u(x,t) - \alpha\Delta u(x,t) & = 0      && \text{in }\Omega\times(0,1] \\
+                                 u(x,t) & = u_0(x) && \text{in }\Omega\times\{0\}
+\end{align}
+
+\noindent with initial condition $u_0: \bar{\Omega}\to\mathbb{R}$ and periodic boundary conditions on $\partial\Omega$.
+
+
+Let $f : \mathbb{R}^n \to \mathbb{R}$ be an objective function and $c : \mathbb{R}^n \to \mathbb{R}$ an equality constraint. The associated equality constrained optimization problem is given by
+\begin{align}
+\operatorname{minimize}_{x\in\mathbb{R}^n} & f(x) && \text{subject to}\, c(x) = 0.
+\end{align}
+
+We assume that $f$ is a convex function.\footnote{If needed, we assume that $f$ is a differentiable, convex function.}
+
+
+
+
+\section{Typesetting Floats}
+\label{s:type-floats}
+
+
+
+In the following we will look at some examples on how to create tables and figures. An example of a figure is shown in \figref{f:golden-ratio}.
+
+
+\begin{figure}
+\centering
+\includegraphics[width=3cm]{example-image-golden}
+\caption{Here is a long detailed description of what we can see in the figure.\label{f:golden-ratio}}
+\end{figure}
+
+
+
+%\glsadd{symb:vel}\glsadd{symb:statem}\glsadd{symb:adjl}

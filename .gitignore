@@ -10,5 +10,8 @@
 *.fdb_latexmk
 *.pdfsync
 *.synctex.gz
+*.bcf
+*.run.xml
+thesis.pdf
 talk.pdf
 .DS_Store
