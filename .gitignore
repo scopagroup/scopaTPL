@@ -6,13 +6,15 @@
 *.toc
 *.nav
 *.snm
+*.thm
 *.fls
+*.bcf
+*.run.xml
 *.fdb_latexmk
 *.pdfsync
 *.synctex.gz
-*.bcf
-*.run.xml
 thesis.pdf
 report.pdf
+paper.pdf
 talk.pdf
 .DS_Store

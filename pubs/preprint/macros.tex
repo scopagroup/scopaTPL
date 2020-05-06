@@ -1,0 +1,68 @@
+% refs
+\newcommand{\figref}[1]{Figure~\ref{#1}}
+\newcommand{\tabref}[1]{Table~\ref{#1}}
+\newcommand{\secref}[1]{\S\ref{#1}}
+\newcommand{\algref}[1]{Algorithm~\ref{#1}}
+\newcommand{\runref}[1]{Run~\##1}
+
+
+
+
+% general
+\newcommand{\ts}{\textsuperscript}
+
+
+
+
+% mathematics
+\newcommand{\defeq}{\ensuremath{\mathrel{\mathop:}=}}
+\newcommand{\eqdef}{\ensuremath{=\mathrel{\mathop:}}}
+
+\DeclareMathOperator*{\minopt}{minimize}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator{\bigO}{\mathcal{O}}
+
+\newcommand{\ns}[1]{\ensuremath{\mathbb{#1}}}
+\newcommand{\fun}[1]{\ensuremath{\mathcal{#1}}}
+
+\newcommand{\vect}[1]{\boldsymbol{#1}} % vector
+\newcommand{\mat}[1]{\boldsymbol{#1}}  % matrix
+\newcommand{\idiv}{\ensuremath{\nabla\cdot}} % divergence
+\newcommand{\igrad}{\ensuremath{\nabla}} % gradient
+\newcommand{\ilap}{\rotatebox[origin=c]{180}{$\nabla$}} % laplacian
+\newcommand{\icurl}{\ensuremath{\nabla \times}} % curl
+\newcommand{\dop}[1]{\ensuremath{\mathcal{#1}}} % differential operator
+
+\newcommand{\tr}{\ensuremath{\operatorname{tr}}} % trace
+\newcommand{\id}{\ensuremath{\operatorname{id}}} % id
+\newcommand{\diag}{\ensuremath{\operatorname{diag}}} % diag
+\newcommand{\T}{\ensuremath{\mathsf{T}}} % transpose
+
+\newcommand{\half}[1]{\frac{#1}{2}}
+
+\renewcommand{\d}[1]{\mathop{}\!\mathrm{d}#1}
+\newcommand{\dt}{\d{t}}
+\newcommand{\dx}{\d{\x}}
+\newcommand{\p}{\partial}
+
+\newcommand{\di}[1]{\ensuremath{\mathbf{#1}}} % discrete quantities
+
+
+
+
+% lists
+\newcommand{\bipa}{\begin{inparaenum}[(\itshape i\upshape)]}
+\newcommand{\eipa}{\end{inparaenum}}
+\newcommand{\bipasub}{\begin{inparaenum}[(\itshape a\upshape)]}
+\newcommand{\eipasub}{\end{inparaenum}}
+
+
+
+
+% tables
+\newcommand{\mcol}[2]{\multicolumn{#1}{r}{#2}}
+\newcommand{\mrow}[2]{\multirow{#1}{*}{#2}}
+\newcommand{\mrowrot}[2]{
+\parbox[t]{2mm}{\multirow{#1}{*}{\rotatebox[origin=c]{90}{#2}}}
+}
+

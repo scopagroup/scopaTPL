@@ -1,0 +1,88 @@
+\usepackage[T1]{fontenc}
+
+\usepackage[sort,compress]{cite}
+\usepackage[ruled,noend,linesnumbered,algo2e]{algorithm2e}
+\usepackage{amsmath,amssymb,amsfonts,amsbsy,amsfonts,latexsym}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{subcaption}
+\usepackage[labelfont=bf,textfont=it,belowskip=0pt,aboveskip=5pt,tableposition=top]{caption}
+\usepackage{colortbl}
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage[sc]{mathpazo}
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{paralist}
+\usepackage{lscape}
+\usepackage{nicefrac}
+\usepackage{geometry}
+\usepackage[hyperpageref]{backref}
+%\usepackage[backref]{hyperref}
+\usepackage[table]{xcolor}
+\usepackage{tikz,pgfplots}
+\usepackage{enumitem}
+\usepackage{xr}
+\newtheorem{remark}{Remark}
+
+\geometry{margin=1in}
+
+
+\newcounter{runidnum}
+\sisetup
+{round-precision=2,
+fixed-exponent=0,
+binary-units=true,
+round-mode=places,
+table-number-alignment=center,
+retain-explicit-plus = true,
+output-exponent-marker = \text{e}}
+
+\definecolor{colorA}{RGB}{189,201,225}
+\definecolor{colorB}{RGB}{103,169,207}
+\definecolor{colorC}{RGB}{ 28,144,153}
+\definecolor{colorD}{RGB}{  1,108, 89}
+
+\newcolumntype{R}{>{\columncolor{gray!40}}r}
+\newcolumntype{L}{>{\columncolor{gray!40}}l}
+\newcolumntype{C}{>{\columncolor{gray!40}}c}
+\newcommand{\highlightrow}{\rowcolor{gray!20}}
+
+\newcommand{\runid}{\stepcounter{runidnum}\#\num{\therunidnum}}
+\newcommand{\resetrunid}{\setcounter{runidnum}{0}}
+
+\newcommand{\cheadingA}{\rowcolor{colorA!80}}
+\newcommand{\cheadingB}{\rowcolor{colorA!60}}
+\newcommand{\cheadingC}{\rowcolor{colorA!40}}
+
+
+\captionsetup[table]{name=Table}
+\graphicspath{{./figs/}}
+\DeclareGraphicsExtensions{.pdf,.png}
+
+\newcommand\aref{Algorithm \ref}
+\newcommand\eref{Eq. \ref}
+\newcommand\fref{Fig. \ref}
+\newcommand\tref{Table \ref}
+
+\usepackage{pgfplots, pgfplotstable}
+\newcommand{\eval}[1]{
+\pgfmathparse{#1}\pgfmathprintnumberto[precision=2, assume math mode=true]{\pgfmathresult}{\roundednumber}\roundednumber~x
+}
+\newcommand{\bfeval}[1]{
+  \textcolor{black}{\textbf{\eval{#1}}}
+}
+
+
+\let\pgfimageWithoutPath\pgfimage
+\renewcommand{\pgfimage}[2][]{\pgfimageWithoutPath[#1]{figs/#2}}
+
+\DeclareCaptionLabelFormat{andtable}{#1~#2  \&  \tablename~\thetable}
+
+\newcommand{\intOmg}[1]{\int\limits_\Omega #1~\mbox{d}\mathbf{x}}
+\newcommand{\intT}[1]{\int\limits_0^1 #1~\mbox{d}t}
+\newcommand{\inD}{\mbox{in}~}
+\newcommand{\bvec}[1]{\mathbf{#1}}
+
+\def\algclr#1{\leavevmode\rlap{\hbox to \hsize{\color{#1!30}\leaders\hrule height .8\baselineskip depth .5ex\hfill}}}
+\def\algcomment#1{{\hfill$\triangleright$\small\textsf{ #1 }}}
