@@ -13,5 +13,6 @@
 *.bcf
 *.run.xml
 thesis.pdf
+report.pdf
 talk.pdf
 .DS_Store
