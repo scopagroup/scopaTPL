@@ -1,0 +1,39 @@
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsfonts,amsbsy,amsfonts,latexsym}
+\usepackage{colortbl}
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{nicefrac}
+\usepackage{algorithmic}
+\usepackage[hyperpageref]{backref}
+\usepackage[table]{xcolor}
+
+% add a serial/Oxford comma by default.
+\newcommand{\creflastconjunction}{, and~}
+
+\sisetup
+{round-precision=2,
+fixed-exponent=0,
+binary-units=true,
+round-mode=places,
+table-number-alignment=center,
+retain-explicit-plus = true,
+output-exponent-marker = \text{e}}
+
+\definecolor{colorA}{RGB}{189,201,225}
+\definecolor{colorB}{RGB}{103,169,207}
+\definecolor{colorC}{RGB}{ 28,144,153}
+\definecolor{colorD}{RGB}{  1,108, 89}
+
+\newcolumntype{R}{>{\columncolor{gray!40}}r}
+\newcolumntype{L}{>{\columncolor{gray!40}}l}
+\newcolumntype{C}{>{\columncolor{gray!40}}c}
+
+
+% used for creating new theorem and remark environments
+\newsiamremark{remark}{Remark}
+\newsiamremark{hypothesis}{Hypothesis}
+\crefname{hypothesis}{Hypothesis}{Hypotheses}
+\newsiamthm{claim}{Claim}
+
