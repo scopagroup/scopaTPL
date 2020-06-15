@@ -1,0 +1,157 @@
+% include packages
+\usepackage{amsmath,amssymb}
+\usepackage{mathtools}
+\usepackage{listings}
+\usepackage{titling}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage{cmbright}
+\usepackage{caption}
+\usepackage{multicol}
+\usepackage{sectionbox}
+\usepackage{tikz}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{siunitx}
+\usepackage[shortlabels]{enumitem}
+\usepackage{booktabs}
+\sisetup
+{
+round-precision=3,
+round-mode=figures,
+output-exponent-marker = E
+}
+
+
+
+% Qualitative colorset (printer friendly, colorblind save) (by colorbrewer2.org)
+\definecolor{am@red}{RGB}{228,26,28}
+\definecolor{am@blue}{RGB}{55,126,184}
+\definecolor{am@green}{RGB}{77,175,74}
+\definecolor{am@violet}{RGB}{152,78,163}
+\definecolor{am@orange}{RGB}{255,127,0}
+\definecolor{am@yellow}{RGB}{255,255,51}
+\definecolor{am@brown}{RGB}{166,86,40}
+\definecolor{am@pink}{RGB}{247,129,191}
+\definecolor{am@gray}{RGB}{153,153,153}
+
+% Color definitions from ICES
+\definecolor{uh@red}{RGB}{200,16,46}
+\definecolor{uh@teal}{RGB}{0,179,136}
+\definecolor{uh@gold}{RGB}{246,190,0}
+\definecolor{uh@gray}{RGB}{136,139,141}
+\definecolor{uh@cream}{RGB}{255,249,217}
+
+% More color definitions
+\definecolor{am@darkred}{RGB}{153,0,0}
+\definecolor{am@medred}{RGB}{204,51,51}
+\definecolor{am@darkgreen}{RGB}{0,102,0}
+\definecolor{am@lightgreen}{RGB}{233,255,233}
+\definecolor{am@darkcyan}{RGB}{51,102,102}
+\definecolor{am@lightcyan}{RGB}{233,255,255}
+\definecolor{am@darkgray}{RGB}{51,51,51}
+\definecolor{am@medgray}{RGB}{102,102,102}
+\definecolor{am@lightgray}{RGB}{229,229,229}
+
+
+% set colors for title
+\colorlet{titlecolor}{uh@red}
+\colorlet{instcolor}{am@medgray}
+
+% set colors for section titles
+\colorlet{sectioncolor}{uh@red}
+
+% set colors of package `sectionbox`
+\colorlet{sectboxrulecol}{am@darkgray}
+\colorlet{sectboxfillcol}{am@lightgray}
+\colorlet{subsectboxrulecol}{am@darkgray}
+\colorlet{subsectboxfillcol}{am@lightcyan}
+\colorlet{subsubsectboxrulecol}{am@darkcyan}
+\colorlet{subsubsectboxfillcol}{white}
+
+
+
+% set section title formats
+\titleformat{\chapter}[display]
+{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titleformat{\section}
+{\normalfont\large\bfseries\center\color{sectioncolor}}{\thesection.}{0.5ex}{}
+\titleformat{\subsection}
+{\normalfont\normalsize\bfseries\color{sectioncolor}}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+\titleformat{\paragraph}[runin]
+{\normalfont\normalsize\bfseries\color{sectioncolor}}{\theparagraph}{1em}{}
+\titleformat{\subparagraph}[runin]
+{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+\titlespacing*{\chapter}{0pt}{50pt}{40pt}
+\titlespacing*{\section}{0pt}{1.5ex plus 1ex minus .5ex}{0.0ex plus .0ex}
+\titlespacing*{\subsection}{0pt}{1.0ex plus 1ex minus .2ex}{0.2ex plus .2ex}
+\titlespacing*{\subsubsection}{0pt}{1.0ex plus 1ex minus .2ex}{1.0ex plus .2ex}
+\titlespacing*{\paragraph}{0pt}{1.25ex plus 1ex minus .2ex}{1em}
+\titlespacing*{\subparagraph}{\parindent}{3.25ex plus 1ex minus .2ex}{1em}
+
+% set poster title formats
+\renewcommand{\titlesize}{\huge}
+\renewcommand{\authorsize}{\Large}
+\renewcommand{\instsize}{\Large}
+
+% set poster title lengths
+% horizontal orientation
+%\setlength{\logowidth}{0.15\textheight}
+%\setlength{\titlewidth}{\textwidth}
+%\addtolength{\titlewidth}{-4.05\logowidth}
+
+% portrait orientation
+\setlength{\logowidth}{0.19\textwidth}
+\setlength{\titlewidth}{0.55\textwidth}
+%\addtolength{\titlewidth}{-5.05\logowidth}
+%\addtolength{\titlewidth}{-5.05\logowidth}
+
+\graphicspath{{figures/}{logos/}}
+
+% set poster logos
+%\renewcommand{\printleftlogo}{%
+%\includegraphics[width=\columnwidth]{}
+%}
+
+\renewcommand{\printrightlogo}{
+\includegraphics[width=0.6\columnwidth]{uh}
+}
+
+% define itemized list environment
+\newenvironment{posteritemize}
+{
+\begin{list}
+{\color{am@darkcyan}$\bullet$}
+{\setlength{\labelsep}{1ex}\setlength{\leftmargin}{2.5ex}}
+}
+{\end{list}}
+
+
+% set width of the lines between columns
+\setlength{\columnseprule}{1pt}
+
+
+\makeatletter
+\newlength{\bibhang}
+\setlength{\bibhang}{0.1em}
+\newlength{\bibsep}
+ {\@listi \global\bibsep\itemsep \global\advance\bibsep by\parsep}
+\newlist{bibsection}{itemize}{3}
+\setlist[bibsection]{label=,leftmargin={\bibhang+\widthof{[9]}},%
+        itemindent=-\bibhang,
+        itemsep=\bibsep,parsep=\z@,partopsep=0pt,
+        topsep=0pt}
+\newlist{bibenum}{enumerate}{3}
+\setlist[bibenum]{label=\textbf{\arabic*.},leftmargin={\bibhang+\widthof{[999]}},%
+        itemindent=-\bibhang,
+        itemsep=\bibsep,parsep=\z@,partopsep=0pt,
+        topsep=0pt}
+\let\oldendbibenum\endbibenum
+\def\endbibenum{\oldendbibenum\vspace{-.6\baselineskip}}
+\let\oldendbibsection\endbibsection
+\def\endbibsection{\oldendbibsection\vspace{-.6\baselineskip}}
+\makeatother
