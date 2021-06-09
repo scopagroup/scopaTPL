@@ -100,8 +100,7 @@ DDIR= #ADD YOUR DATA DIRECTORY DIRECTORY HERE (NO EMPTY SPACE AFTER =)
 
 To prevent having to enter your password whenever you check out code on a compute node add your SSH key to GitHub.
 
-General instructions can be found here:
-[ssh-agend](https://docs.github.com/en/github-ae@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+General instructions can be found here: [ssh-agent](https://docs.github.com/en/github-ae@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 ```
 ssh-keygen -t ed25519 -C "YOUREMAIL_GIT@uh.edu"
