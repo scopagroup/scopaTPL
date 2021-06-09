@@ -1,6 +1,6 @@
 # Instructions for Servers on UH's RCDC
 
-## Table of Content
+## Table of Contents
 * [General Information](#info)
 * [Allocations](#alloc)
 * [Creating an Account](#account)

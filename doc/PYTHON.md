@@ -1,6 +1,6 @@
 # Instructions for using Python
 
-## Table of Content
+## Table of Contents
 * [Installation](#install)
 
 ## Installation<a name="install"></a> 
