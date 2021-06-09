@@ -7,6 +7,7 @@
 * [Interactive Jobs](#inter)
 * [Job Submission Files](#jobsub)
 * [SSH Keys](#sshkeys)
+* [CLAIRE](#claire)
 
 ## General Information<a name="info"></a> 
 
@@ -111,3 +112,29 @@ Host *
   AddKeysToAgent yes
   IdentityFile ~/.ssh/id_ed25519
 ```
+
+
+## CLAIRE<a name="claire"></a>
+
+
+### Compilation of CLAIRE on Sabine
+
+* Set of modules loaded:
+```bash
+module load python
+module load CMake
+module load OpenMPI/intel/4.0.1
+module load CUDA/10.0.130 (edited) 
+```
+* Compilation of dependencies:
+```bash
+cd deps
+make -j
+cd ..
+```
+
+* Compilation of CLAIRE:
+```bash
+source deps/env_source.sh
+make -j
+``` 
