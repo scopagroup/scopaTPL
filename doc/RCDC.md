@@ -46,14 +46,24 @@ Information to be entered:
 
 ##<a name="inter"></a> Interactive Jobs
 
-On the compute nodes, to run an interactive job (log into a compute node) you need to do the following:
+On the compute nodes, to run an interactive job (log into a compute node requesting one node and 20 cores) you need to do the following:
 ```
-srun -n 20 -t 2:00:00 --pty /bin/bash -l
+srun -A mang -n 20 -t 2:00:00 -p medium --pty /bin/bash -l
 ```
 
-in your command window
+in your command window. To request a GPU do
+```
+srun -A mang -t 3:00:00 -n 1 -p volta --gres=gpu:1 -N 1 --pty /bin/bash -l
+```
 
+You can define an ALIAS in your `~/.bashrc` to make your live easier. Here are two examples:
+```
+alias irun='srun -A mang -t 3:00:00 -n 1 -p volta --gres=gpu:1 -N 1 --pty /bin/bash -l'
+```
 
+```
+alias irun='srun -A mang -n 20 -t 2:00:00 -p medium --pty /bin/bash -l'
+```
 
 ##<a name="jobsub"></a> Job Submission Files
 
