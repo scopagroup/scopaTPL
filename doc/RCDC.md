@@ -1,5 +1,14 @@
 # Instructions for Servers on UH's RCDC
 
+## Table of Content
+* [General Information](#info)
+* [Allocations](#alloc)
+* [Creating an Account](#account)
+* [Interactive Jobs](#inter)
+* [Job Submission Files](#jobsub)
+
+##<a name="info"></a>  General Information
+
 For more information on how to access advanced computing resources at RCDC visit the following web page:
 
 * [RCDC webpage](https://uh.edu/rcdc)
@@ -7,7 +16,7 @@ For more information on how to access advanced computing resources at RCDC visit
 
 To learn how the available SUS will be affected by executing software on a particular hardware, see [allocations](https://uh.edu/rcdc/support-services/user-guide/allocations).
 
-## Allocations on RCDC Clusters
+##<a name="alloc"></a> Allocations on RCDC Clusters
 
 * Opuntia
 	* Awarded allocation: 50,000 SUs
@@ -20,7 +29,7 @@ To learn how the available SUS will be affected by executing software on a parti
 	* Renewal date: July 2021.
 
 
-## Creating an Account
+##<a name="account"></a> Creating an Account
 
 To create an account for one of the RCDC clusters go here:
 [https://uh.edu/rcdc/getting-started/request-account.php](https://uh.edu/rcdc/getting-started/request-account.php)
@@ -35,7 +44,7 @@ Information to be entered:
 * For your login shell select `bash` (if you don't know what you are doing)
 
 
-## Interactive Jobs
+###<a name="inter"></a> # Interactive Jobs
 
 On the compute nodes, to run an interactive job (log into a compute node) you need to do the following:
 ```
@@ -46,7 +55,7 @@ in your command window
 
 
 
-## Job Submission Files
+##<a name="jobsub"></a> Job Submission Files
 
 An exemplary job submission file (one node with 20 CPU cores)
 ```bash
