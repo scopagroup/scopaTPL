@@ -1,4 +1,4 @@
-#GIT and GitHub
+## GIT and GitHub
 
 If you have not done so and you are working with me, create a GitHub account: [https://github.com](https://github.com)
 
@@ -7,7 +7,7 @@ Use a reasonable user name, since this will can serve as a business card for pro
 [http://github.com/andreasmang](http://github.com/andreasmang)
 
 
-## SSH keys
+### SSH keys
 
 In order to avoid having to type your password to push or pull code from and to GitHub, create an SSH key:
 

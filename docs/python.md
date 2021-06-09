@@ -1,11 +1,11 @@
-# Instructions for using Python
+## Python
 
-## Table of Contents
+### Table of Contents
 * [Installation](#install)
 
-## Installation<a name="install"></a> 
+### Installation<a name="install"></a> 
 
-### Installation of Python from Source
+#### Installation of Python from Source
 
 If you want to install a local version of python (which allows you to add packages) on a server that does not give you root access you can do the following:
 
@@ -19,7 +19,7 @@ If you want to install a local version of python (which allows you to add packag
 export PATH=/path/to/python-bin/bin:${PATH}
 ```
 
-### Adding Packages on RCDC's clusters
+#### Adding Packages on RCDC's clusters
 
 You can always try to extend the installation by add the packages locally. For instance if I wanted to install a local copy of `pypesto`, you can run
 ``` bash

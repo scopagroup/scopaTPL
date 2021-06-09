@@ -1,4 +1,4 @@
-# Info for Graduate Students at UH
+## Info for GSs at UH
 
 NSM Graduate Advisor (2020):
 Melissa Lowrey
@@ -6,7 +6,7 @@ Program Director for Graduate Studies, 713-743-1703
 Office: 202A SR1 mlowrey@central.uh.edu
 
 
-## General Reources 
+### General Reources 
 
 Information for new graduate students (including Departmental Graduate Student Handbook):
 
@@ -17,7 +17,7 @@ Information for financial support of PhD students at UH can be found here:
 [https://uh.edu/nsm/students/graduate/financial-support/index](https://uh.edu/nsm/students/graduate/financial-support/index)
 
 
-## Mathematical Societies
+### Mathematical Societies
 
 Consider joining SIAM early in your PhD. It's free for PhD students and allows you to interact with the Applied Mathematics community at large.
 
@@ -35,7 +35,7 @@ More information about activity groups can be found here:
 [https://www.siam.org/membership/activity-groups](https://www.siam.org/membership/activity-groups)
 
 
-## Templates
+### Templates
 
 I have created a repository on GitHub for graduate students with LaTeX templates they can use for
 

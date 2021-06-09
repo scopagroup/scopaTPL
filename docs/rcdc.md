@@ -1,6 +1,6 @@
-# Instructions for Servers on UH's RCDC
+## RCDC
 
-## Table of Contents
+### Table of Contents
 * [General Information](#info)
 * [Allocations](#alloc)
 * [Creating an Account](#account)
@@ -9,7 +9,7 @@
 * [SSH Keys](#sshkeys)
 * [CLAIRE](#claire)
 
-## General Information<a name="info"></a> 
+### General Information<a name="info"></a> 
 
 For more information on how to access advanced computing resources at RCDC visit the following web page:
 
@@ -18,7 +18,7 @@ For more information on how to access advanced computing resources at RCDC visit
 
 To learn how the available SUS will be affected by executing software on a particular hardware, see [allocations](https://uh.edu/rcdc/support-services/user-guide/allocations).
 
-## Allocations on RCDC Clusters<a name="alloc"></a> 
+### Allocations on RCDC Clusters<a name="alloc"></a> 
 
 * Opuntia
 	* Awarded allocation: 50,000 SUs
@@ -31,7 +31,7 @@ To learn how the available SUS will be affected by executing software on a parti
 	* Renewal date: July 2021.
 
 
-## Creating an Account<a name="account"></a> 
+### Creating an Account<a name="account"></a> 
 
 To create an account for one of the RCDC clusters go here:
 [https://uh.edu/rcdc/getting-started/request-account.php](https://uh.edu/rcdc/getting-started/request-account.php)
@@ -46,7 +46,7 @@ Information to be entered:
 * For your login shell select `bash` (if you don't know what you are doing)
 
 
-## Interactive Jobs<a name="inter"></a>
+### Interactive Jobs<a name="inter"></a>
 
 On the compute nodes, to run an interactive job (log into a compute node requesting one node and 20 cores) you need to do the following:
 ```
@@ -67,7 +67,7 @@ alias irun='srun -A mang -t 3:00:00 -n 1 -p volta --gres=gpu:1 -N 1 --pty /bin/b
 alias irun='srun -A mang -n 20 -t 2:00:00 -p medium --pty /bin/bash -l'
 ```
 
-## Job Submission Files<a name="jobsub"></a>
+### Job Submission Files<a name="jobsub"></a>
 
 An exemplary job submission file (one node with 20 CPU cores)
 ```bash
@@ -97,7 +97,7 @@ DDIR= #ADD YOUR DATA DIRECTORY DIRECTORY HERE (NO EMPTY SPACE AFTER =)
 ```
 
 
-## SSH Keys<a name="sshkeys"></a>
+### SSH Keys<a name="sshkeys"></a>
 
 To prevent having to enter your password whenever you check out code on a compute node add your SSH key to GitHub.
 
@@ -114,10 +114,10 @@ Host *
 ```
 
 
-## CLAIRE<a name="claire"></a>
+### CLAIRE<a name="claire"></a>
 
 
-### Compilation of CLAIRE on Sabine
+#### Compilation of CLAIRE on Sabine
 
 * Set of modules loaded:
 ```bash

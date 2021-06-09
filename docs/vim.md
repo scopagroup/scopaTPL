@@ -1,4 +1,4 @@
-#vim
+## vim
 
 Consider learning vim (especially if you are working on HPC platforms).
 
@@ -7,13 +7,13 @@ Here's an interactive intro on what vim is and how to use it:
 [https://www.openvim.com](https://www.openvim.com)
 
 
-## Cheat Sheet
+### Cheat Sheet
 
 Here's a link to a cheat sheet for VIM:
 
 [https://devhints.io/vim](https://devhints.io/vim)
 
-## My ~/.vimrc
+### My ~/.vimrc
 
 Here's the content of my `~/.vimrc`
 
