@@ -33,3 +33,44 @@ Information to be entered:
 * If you want to execute / develop GPU code use Sabine [ Resource ( Cluster ) ]
 * For CPU code, use "Opuntia" [ Resource ( Cluster ) ]
 * For your login shell select `bash` (if you don't know what you are doing)
+
+
+## Interactive Jobs
+
+On the compute nodes, to run an interactive job (log into a compute node) you need to do the following:
+```
+srun -n 20 -t 2:00:00 --pty /bin/bash -l
+```
+
+in your command window
+
+
+
+## Job Submission Files
+
+An exemplary job submission file (one node with 20 CPU cores)
+```bash
+#!/bin/bash
+### sbatch parameters
+#SBATCH -J #ADD YOUR JOB NAME HERE
+#SBATCH -N 1
+#SBATCH -n 20
+#SBATCH -o hostname.out
+#SBATCH -e hostname.err
+#SBATCH -t 0-04:00:00
+#SBATCH --mail-user= #ADD YOUR EMAIL HERE
+#SBATCH --mail-type=begin
+#SBATCH --mail-type=end
+#SBATCH --mail-type=fail
+#SBATCH -A mang
+export I_MPI_PIN_DOMAIN=omp
+export OMP_NUM_THREADS=1
+module load # ADD YOUR MODULES HERE
+### directory of your code
+CDIR= #ADD YOUR CODE DIRECTORY HERE (NO EMPTY SPACE AFTER =)
+DDIR= #ADD YOUR DATA DIRECTORY DIRECTORY HERE (NO EMPTY SPACE AFTER =)
+#### define paths
+# ADD DEFINITION FOR PATHS HERE IF YOU HAVE ANY
+#### submitt job
+# ADD COMMAND YOU WOULD LIKE TO EXECUTE HERE
+```
