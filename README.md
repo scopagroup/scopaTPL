@@ -4,3 +4,4 @@ This repository contains templates for talks, reports, and theses. It also conta
 
 ## Content
 * Notes on [python](doc/PYTHON.md)
+* Notes on [RCDC](doc/RCDC.md)
