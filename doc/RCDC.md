@@ -6,8 +6,9 @@
 * [Creating an Account](#account)
 * [Interactive Jobs](#inter)
 * [Job Submission Files](#jobsub)
+* [SSH Keys](#sshkeys)
 
-##<a name="info"></a>  General Information
+## General Information<a name="info"></a> 
 
 For more information on how to access advanced computing resources at RCDC visit the following web page:
 
@@ -16,7 +17,7 @@ For more information on how to access advanced computing resources at RCDC visit
 
 To learn how the available SUS will be affected by executing software on a particular hardware, see [allocations](https://uh.edu/rcdc/support-services/user-guide/allocations).
 
-##<a name="alloc"></a> Allocations on RCDC Clusters
+## Allocations on RCDC Clusters<a name="alloc"></a> 
 
 * Opuntia
 	* Awarded allocation: 50,000 SUs
@@ -29,7 +30,7 @@ To learn how the available SUS will be affected by executing software on a parti
 	* Renewal date: July 2021.
 
 
-##<a name="account"></a> Creating an Account
+## Creating an Account<a name="account"></a> 
 
 To create an account for one of the RCDC clusters go here:
 [https://uh.edu/rcdc/getting-started/request-account.php](https://uh.edu/rcdc/getting-started/request-account.php)
@@ -44,7 +45,7 @@ Information to be entered:
 * For your login shell select `bash` (if you don't know what you are doing)
 
 
-##<a name="inter"></a> Interactive Jobs
+## Interactive Jobs<a name="inter"></a>
 
 On the compute nodes, to run an interactive job (log into a compute node requesting one node and 20 cores) you need to do the following:
 ```
@@ -65,7 +66,7 @@ alias irun='srun -A mang -t 3:00:00 -n 1 -p volta --gres=gpu:1 -N 1 --pty /bin/b
 alias irun='srun -A mang -n 20 -t 2:00:00 -p medium --pty /bin/bash -l'
 ```
 
-##<a name="jobsub"></a> Job Submission Files
+## Job Submission Files<a name="jobsub"></a>
 
 An exemplary job submission file (one node with 20 CPU cores)
 ```bash
@@ -95,7 +96,7 @@ DDIR= #ADD YOUR DATA DIRECTORY DIRECTORY HERE (NO EMPTY SPACE AFTER =)
 ```
 
 
-## SSH Keys
+## SSH Keys<a name="sshkeys"></a>
 
 To prevent having to enter your password whenever you check out code on a compute node add your SSH key to GitHub.
 
