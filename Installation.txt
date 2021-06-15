@@ -1,9 +1,0 @@
-Using Anaconda3:
-
-conda create -n env-name python=3.7 ( I think 3.8 should be fine too, given on the cluster it ran)
-
-conda install mkl-service libpython m2w64-toolchain scipy
-
-pip3 install pymc3 --no-cache
-
-pip3 install pypesto --no-cache
