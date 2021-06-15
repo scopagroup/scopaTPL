@@ -2,6 +2,7 @@
 
 ### Table of Contents
 * [Installation](#install)
+* [Packages](#pack)
 
 ### Installation<a name="install"></a> 
 
@@ -27,3 +28,10 @@ pip install pypesto --user
 ```
 
 This will install the package you want locally without bothering the main installation branch.
+
+
+### Packages
+
+#### pyPESTO
+
+`pyPESTO` can be downloaded here [https://pypi.org/project/pypesto](https://pypi.org/project/pypesto).
