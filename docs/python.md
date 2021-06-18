@@ -38,11 +38,9 @@ This will install the package you want locally without bothering the main instal
 
 #### Installation Pymc3/Pypesto via Anaconda
 
+``` bash
 conda create -n trial python=3.7
-
 conda install mkl-service libpython m2w64-toolchain scipy
-
 pip3 install pymc3 --no-cache
-
 pip3 install pypesto --no-cache
-
+```
