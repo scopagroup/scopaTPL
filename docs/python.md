@@ -41,6 +41,7 @@ This will install the package you want locally without bothering the main instal
 ``` bash
 conda create -n trial python=3.7
 conda install mkl-service libpython m2w64-toolchain scipy
-pip3 install pymc3 --no-cache
+pip3 install pymc3==3.9.1 --no-cache
 pip3 install pypesto --no-cache
+pip3 install arviz==0.8.3 --no-cache
 ```
