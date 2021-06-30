@@ -3,6 +3,7 @@
 ### Table of Contents
 * [General Information](#info)
 * [Allocations](#alloc)
+* [Storage](#store)
 * [Creating an Account](#account)
 * [Interactive Jobs](#inter)
 * [Job Submission Files](#jobsub)
@@ -29,6 +30,16 @@ To learn how the available SUS will be affected by executing software on a parti
 	* Awarded allocation: 25,000 SUs
 	* Start date: September 1st 2020
 	* Renewal date: July 2021.
+
+
+### Storage<a name="store"></a>
+
+Do not store data and results in your `$HOME` directory. Instead, create a folder with your username/name in 
+```bach
+/project/mang
+```
+
+Store all files there. To make sure that others in our team can access these files add `umask 002` to your `bashrc` (`~/.bashrc`).
 
 
 ### Creating an Account<a name="account"></a> 
