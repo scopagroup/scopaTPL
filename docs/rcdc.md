@@ -78,9 +78,11 @@ alias irun='srun -A mang -t 3:00:00 -n 1 -p volta --gres=gpu:1 -N 1 --pty /bin/b
 alias irun='srun -A mang -n 20 -t 2:00:00 -p medium --pty /bin/bash -l'
 ```
 
+
 ### Job Submission Files<a name="jobsub"></a>
 
 An exemplary job submission file (one node with 20 CPU cores)
+
 ```bash
 #!/bin/bash
 ### sbatch parameters
@@ -106,6 +108,18 @@ DDIR= #ADD YOUR DATA DIRECTORY DIRECTORY HERE (NO EMPTY SPACE AFTER =)
 #### submitt job
 # ADD COMMAND YOU WOULD LIKE TO EXECUTE HERE
 ```
+
+If this file is stored as `jobsub.sh`, you can submit it using
+```bash
+sbatch jobsub.sh
+``` 
+
+An example for a command line for Matlab is.
+```bash
+matlab -nodesktop -nodisplay -nosplash -r \"script.m; quit;\"
+```
+
+Here, we execute the Matlab script `script.m`. The script needs to be in `$CDIR` (or in your current directory). You need to load the Matlab module to execute matlab on the cluster.
 
 
 ### SSH Keys<a name="sshkeys"></a>
