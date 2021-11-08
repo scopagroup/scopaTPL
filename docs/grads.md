@@ -6,6 +6,13 @@ Program Director for Graduate Studies, 713-743-1703
 Office: 202A SR1 mlowrey@central.uh.edu
 
 
+### Annual Performance Review (APR)
+* The APR is to be submitted in the 6th and 8th long semester (3rd and 4th year of your PhD)
+* If a student started in Fall, then by the 10th of Jan the APR needs to be completed at the latest.
+* Based on this timeline is suggest the following:
+- Recruit members of your commitee by November 1 at the latest.
+- Submit your APR by December 1 at the latest.
+
 ### General Reources 
 
 Information for new graduate students (including Departmental Graduate Student Handbook):
