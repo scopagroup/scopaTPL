@@ -1,11 +1,11 @@
 ## Info for GSs at UH
 
 ### NSM Graduate Advisor (2020):
-``
+``` bash
 Melissa Lowrey
 Program Director for Graduate Studies, 713-743-1703
 Office: 202A SR1 mlowrey@central.uh.edu
-``
+```
 
 ### Annual Performance Review (APR)
 * The APR is to be submitted in the 6th and 8th long semester (3rd and 4th year of your PhD)
