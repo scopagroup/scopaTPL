@@ -17,8 +17,8 @@ Office: 202A SR1 mlowrey@central.uh.edu
 	* Graduate Studies Director (as of 2022: William Fitzgibbon)
 	* Graduate Adviser (as of 2022: Neha Valji) 
 
-### General Reources 
 
+### General Reources 
 Information for new graduate students (including Departmental Graduate Student Handbook):
 
 [https://www.uh.edu/nsm/math/graduate/new-students](https://www.uh.edu/nsm/math/graduate/new-students)
@@ -29,9 +29,7 @@ Information for financial support of PhD students at UH can be found here:
 
 
 ### Mathematical Societies
-
 Consider joining SIAM early in your PhD. It's free for PhD students and allows you to interact with the Applied Mathematics community at large.
-
 [https://www.siam.org/membership/join-siam/individual-members](https://www.siam.org/membership/join-siam/individual-members) 
 
 I am and have been a member of the following activity groups:
@@ -42,12 +40,10 @@ I am and have been a member of the following activity groups:
 * Supercomputing
 
 More information about activity groups can be found here:
-
 [https://www.siam.org/membership/activity-groups](https://www.siam.org/membership/activity-groups)
 
 
 ### Templates
-
 I have created a repository on GitHub for graduate students with LaTeX templates they can use for
 
 * Presentations
@@ -57,3 +53,8 @@ I have created a repository on GitHub for graduate students with LaTeX templates
 * PhD Thesis
 
 The repo is located at [https://github.com/scopagroup/scopaTPL](https://github.com/scopagroup/scopaTPL).
+
+
+### Prelims
+
+Information regarding the PhD program can be found [here](https://www.uh.edu/nsm/math/graduate/PhD-outline). Detailed information regarding the prelims offered at our department can be found [here](https://www.uh.edu/nsm/math/graduate/PhD-outline/#p1). 
