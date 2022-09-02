@@ -1,125 +1,59 @@
 \documentclass[plainsections,30pt]{sciposter}
 
-\input{template}
-\input{macros}
+\input template
 
 \def\numcols{3}
 
 \author{Andreas Mang}
 
-% horizontal orientation
-%\setlength{\paperwidth}{40in}
-%\setlength{\paperheight}{36in}
-
-% portrait orientation
-\setlength{\paperwidth}{90cm}
-\setlength{\paperheight}{120cm}
-
-% horizontal orientation
-%\setlength{\textwidth}{36in}    %% paperwidth - (3in)
-%\setlength{\textheight}{32in}   %% paperheight - (3in)
-
-% portrait orientation
-\setlength{\textwidth}{80cm}    %% paperwidth - (3in)
-\setlength{\textheight}{118cm}   %% paperheight - (3in)
-
-
 
 \institute{Department of Mathematics, University of Houston, Houston, TX, USA}
 
-\conference{\itshape Conference Name}
+\conference{\itshape Conference Name and Venue}
 
-\title{Poster Title}
-
+\title{Title of Poster}
 
 
 \begin{document}
+\input{title}
 
-
-%////////////////////////////////////////////////////////////////////////
-%\begin{minipage}[c]{\logowidth} % left logo
-%\raggedright\printleftlogo
-%\end{minipage}
-%\hfill
-\begin{minipage}[c]{\titlewidth} % title, authors, institutes}
-%    \begin{center}
-        \normalsize
-        \begin{spacing}{0.8} % title
-            \color{titlecolor}\titlesize\bf\thetitle
-            \vspace{-\baselineskip}
-        \end{spacing}
-        \vspace{0.6\titleskip}
-        \normalsize
-        \begin{spacing}{1.25} % author
-            \authorsize\bf\theauthor
-            \vspace{-\baselineskip}
-        \end{spacing}
-        \vspace{0.6\titleskip}
-        \normalsize
-        \begin{spacing}{1} % institute
-            \instsize\theinstitute
-        \end{spacing}
-%    \end{center}
-\end{minipage}
-\hfill
-\begin{minipage}[c]{\logowidth} % right logo
-\raggedleft\printrightlogo
-\end{minipage}
-\vspace{\titleskip}
-%////////////////////////////////////////////////////////////////////////
-
-
-
-
-%////////////////////////////////////////////////////////////////////////
-%////////////////////////////////////////////////////////////////////////
 \begin{multicols}{\numcols}
 
 \begin{sectionbox}{}
-\textbf{Goal:} Outline.
+\textbf{Goal:} This is a template for poster presentations~\cite{Mang:2022a}.
 \end{sectionbox}
 
 
+\section*{Introduction}
 
+Let $A \in \mathbb{R}^{n,m}$, $x \in \mathbb{R}^n$, and $y \in \mathbb{R}^m$. Then,
+\[
+A x = y.
+\]
 
-%////////////////////////////////////////////////////////////////////////
+We can find $x$ by solving the following optimization problem:
+\[
+\text{minimize}_{x\in\mathbb{R}^n} \; \|Ax-y\|_2^2.
+\]
+
 \section*{Mathematical Problem Formulation}
 
 
-
-
-%////////////////////////////////////////////////////////////////////////
 \section*{Numerics}
 
 
-
-
-%////////////////////////////////////////////////////////////////////////
 \section*{Results}
 
 
-
-
-%////////////////////////////////////////////////////////////////////////
 \section*{Conclusions}
 
 
-
-
-%////////////////////////////////////////////////////////////////////////
-\paragraph{References}
 \begin{footnotesize}
-\begin{bibenum}[itemsep=5pt]
-\item A. Mang. Poster Presentation. 2020.
-\end{bibenum}
+\begin{thebibliography}{9}
+\bibitem{Mang:2022a} A. Mang, {\em This is a poster template}. Department of Mathematics, University of Houston, 2022.
+\end{thebibliography}
 \end{footnotesize}
 
-
 \end{multicols}
-%////////////////////////////////////////////////////////////////////////
-%////////////////////////////////////////////////////////////////////////
-
-
-
 
 \end{document}

@@ -10,6 +10,8 @@
 \usepackage{cmbright}
 \usepackage{caption}
 \usepackage{multicol}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
 \usepackage{sectionbox}
 \usepackage{tikz}
 \usepackage{multirow}
@@ -17,16 +19,22 @@
 \usepackage{siunitx}
 \usepackage[shortlabels]{enumitem}
 \usepackage{booktabs}
+\usepackage[]{lipsum}
+\usepackage{paralist}
+\usepackage{lipsum}
 \sisetup
 {
 round-precision=3,
 round-mode=figures,
-output-exponent-marker = E
+output-exponent-marker = e
 }
 
+\usepackage[fontsize=31]{scrextend}
+\graphicspath{{figures/}{logos/}}
 
+\captionsetup{font=small,labelfont=bf}
 
-% Qualitative colorset (printer friendly, colorblind save) (by colorbrewer2.org)
+% qualitative colorset (printer friendly, colorblind save) (by colorbrewer2.org)
 \definecolor{am@red}{RGB}{228,26,28}
 \definecolor{am@blue}{RGB}{55,126,184}
 \definecolor{am@green}{RGB}{77,175,74}
@@ -57,11 +65,13 @@ output-exponent-marker = E
 
 
 % set colors for title
-\colorlet{titlecolor}{uh@red}
+%\colorlet{titlecolor}{uh@red}
+\colorlet{titlecolor}{white}
 \colorlet{instcolor}{am@medgray}
 
 % set colors for section titles
-\colorlet{sectioncolor}{uh@red}
+%\colorlet{sectioncolor}{uh@red}
+\colorlet{sectioncolor}{black}
 
 % set colors of package `sectionbox`
 \colorlet{sectboxrulecol}{am@darkgray}
@@ -70,8 +80,6 @@ output-exponent-marker = E
 \colorlet{subsectboxfillcol}{am@lightcyan}
 \colorlet{subsubsectboxrulecol}{am@darkcyan}
 \colorlet{subsubsectboxfillcol}{white}
-
-
 
 % set section title formats
 \titleformat{\chapter}[display]
@@ -86,6 +94,7 @@ output-exponent-marker = E
 {\normalfont\normalsize\bfseries\color{sectioncolor}}{\theparagraph}{1em}{}
 \titleformat{\subparagraph}[runin]
 {\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+
 \titlespacing*{\chapter}{0pt}{50pt}{40pt}
 \titlespacing*{\section}{0pt}{1.5ex plus 1ex minus .5ex}{0.0ex plus .0ex}
 \titlespacing*{\subsection}{0pt}{1.0ex plus 1ex minus .2ex}{0.2ex plus .2ex}
@@ -100,25 +109,27 @@ output-exponent-marker = E
 
 % set poster title lengths
 % horizontal orientation
-%\setlength{\logowidth}{0.15\textheight}
-%\setlength{\titlewidth}{\textwidth}
-%\addtolength{\titlewidth}{-4.05\logowidth}
+\setlength{\paperwidth}{40in}
+\setlength{\paperheight}{36in}
 
 % portrait orientation
-\setlength{\logowidth}{0.19\textwidth}
-\setlength{\titlewidth}{0.55\textwidth}
-%\addtolength{\titlewidth}{-5.05\logowidth}
-%\addtolength{\titlewidth}{-5.05\logowidth}
+%\setlength{\paperwidth}{90cm}
+%\setlength{\paperheight}{120cm}
 
-\graphicspath{{figures/}{logos/}}
+% horizontal orientation
+%\setlength{\textwidth}{37.5in}    %% paperwidth - (3in)
+\setlength{\textwidth}{36in}    %% paperwidth - (3in)
+\setlength{\textheight}{33.5in}   %% paperheight - (3in)
 
-% set poster logos
-%\renewcommand{\printleftlogo}{%
-%\includegraphics[width=\columnwidth]{}
-%}
+% portrait orientation
+%\setlength{\textwidth}{80cm}    %% paperwidth - (3in)
+%\setlength{\textheight}{118cm}   %% paperheight - (3in)
+
+\setlength{\logowidth}{0.375\textwidth}
+\setlength{\titlewidth}{0.608\textwidth}
 
 \renewcommand{\printrightlogo}{
-\includegraphics[width=0.6\columnwidth]{uh}
+\includegraphics[width=0.5\columnwidth]{uh-primary-white}\hspace{3cm}
 }
 
 % define itemized list environment
@@ -133,7 +144,6 @@ output-exponent-marker = E
 
 % set width of the lines between columns
 \setlength{\columnseprule}{1pt}
-
 
 \makeatletter
 \newlength{\bibhang}
@@ -155,3 +165,4 @@ output-exponent-marker = E
 \let\oldendbibsection\endbibsection
 \def\endbibsection{\oldendbibsection\vspace{-.6\baselineskip}}
 \makeatother
+
