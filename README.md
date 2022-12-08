@@ -1,6 +1,11 @@
 # scopaTPL
-This repository contains templates for talks, reports, and theses. 
 
-tains additional instructions for different issues that arise when working on research problems in my group. These can be found no the deployment page:
+## Overview
+This repository contains LaTeX templates for talks, reports, posters, and theses. 
 
-[https://scopagroup.github.io/scopaTPL](https://scopagroup.github.io/scopaTPL)
+## Team
+Information about the SCOPA group at the Department of Mathematics at the University of Houston can be found here:
+[https://scopagroup.github.io](https://scopagroup.github.io)
+
+## Resources
+Additional resources and information that might be helpful if you are wokring on research problems in my group can be found on the deployment page for this repository: [https://scopagroup.github.io/scopaTPL](https://scopagroup.github.io/scopaTPL)
