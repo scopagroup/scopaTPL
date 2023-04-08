@@ -21,10 +21,12 @@ Office: 202A SR1 mlowrey@central.uh.edu
 
 ### General Reources 
 Suggested courses (relevant for working in my group):
-* Optimization
-* Inverse Problems (Bayesian and Deterministic)
-* Applicable Analysis
-* Numerical Analysis
+* Optimization (MATH 6366)
+* Inverse Problems (Bayesian and Deterministic; MATH 6397)
+* Applicable Analysis (MATH 6360)
+* Numerical Analysis (MATH 5370)
+* Numerical Partial Differential Equations (MATH 6374)
+
 
 ### General Reources 
 Information for new graduate students (including Departmental Graduate Student Handbook):
