@@ -14,8 +14,9 @@ Office: 202A SR1 mlowrey@central.uh.edu
 	* Recruit members of your commitee by November 1 at the latest.
 	* Submit your APR (to the department administration) by December 1 at the latest.
 * The APR needs to be submitted to
-	* Graduate Studies Director (as of 2022: William Fitzgibbon)
-	* Graduate Adviser (as of 2022: Neha Valji) 
+	* Graduate Adviser: Andy Chang (jachang@central.uh.edu)
+	* CC: Graduate Studies Director (as of 2022: William Fitzgibbon)
+	* CC: Graduate Adviser (as of 2022: Neha Valji) 
 
 
 ### General Reources 
