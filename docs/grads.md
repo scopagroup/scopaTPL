@@ -28,6 +28,11 @@ Suggested courses (relevant for working in my group):
 * Numerical Partial Differential Equations (MATH 6374)
 
 
+### Workshops
+
+* Mathematics Research Communities Program [https://www.ams.org/programs/research-communities/mrc](https://www.ams.org/programs/research-communities/mrc)
+
+
 ### General Reources 
 Information for new graduate students (including Departmental Graduate Student Handbook):
 
