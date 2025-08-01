@@ -13,6 +13,7 @@
 *.fdb_latexmk
 *.pdfsync
 *.synctex.gz
+*-eps-converted-to.pdf
 thesis.pdf
 report.pdf
 paper.pdf

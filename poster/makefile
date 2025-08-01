@@ -8,7 +8,7 @@ all:
 	${compile} ${filename}
 	${compile} ${filename}
 	${compile} ${filename}
-	open ${filename}.pdf
+	open -a Skim ${filename}.pdf
 	@echo Done ....!
 
 

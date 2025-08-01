@@ -1,30 +1,46 @@
-\fcolorbox{white}{black}{
-\begin{minipage}[c]{\titlewidth} % title, authors, institutes
-\normalsize
-\begin{spacing}{0.9} % title
-\vspace{2.0cm}
-\hspace{1.8cm}\color{titlecolor}\titlesize\bf\thetitle
-\vspace{-0.7\baselineskip}
-\end{spacing}
-\vspace{0.6\titleskip}
-\normalsize
-\begin{spacing}{1.25} % author
-\hspace{1.8cm}\color{titlecolor}\authorsize\bf\theauthor
-\vspace{-\baselineskip}
-\end{spacing}
-\vspace{0.6\titleskip}
-\normalsize
-\begin{spacing}{1.0} % institute
-\hspace{1.8cm}\color{titlecolor}\instsize\theinstitute
-\vspace{1.3cm}
-\vspace{-0.5\baselineskip}
-\end{spacing}
+\vspace*{-2.245in}
+\hspace*{-2.245in}
+\fcolorbox{black}{black}{
+\begin{minipage}[c]{0.75\paperwidth} % title, authors, institutes
+\ifiinst
+    \normalsize
+    \begin{spacing}{0.9} % title
+    \hspace{1.5in}\color{titlecolor}\titlesize\thetitle
+    %\vspace{-0.7\baselineskip}
+    \end{spacing}
+    \normalsize
+    \vspace{0.5in}
+    \begin{spacing}{0.2} % author
+    \hspace{1.5in}\color{titlecolor}\authorsize\theauthor
+    \end{spacing}
+    \vspace{-0.1in}
+\else
+    \normalsize
+    \begin{spacing}{0.9} % title
+    \vspace{0.7in}
+    \hspace{1.5in}\color{titlecolor}\titlesize\thetitle
+    %\vspace{-0.7\baselineskip}
+    \end{spacing}
+    \normalsize
+    \vspace{-0.15in}
+    \begin{spacing}{0.8} % author
+    \hspace{1.5in}\color{titlecolor}\authorsize\theauthor
+    %\vspace{-\baselineskip}
+    \end{spacing}
+    %\vspace{0.6\titleskip}
+    \normalsize
+    \begin{spacing}{0.5} % institute
+    \hspace{1.5in}\color{titlecolor}\instsize\theinstitute
+    %\vspace{1.3cm}
+    %\vspace{-0.5\baselineskip}
+    \end{spacing}
+\fi
+\makeatother
 \end{minipage}
 \hfill
-\begin{minipage}[c]{\logowidth} % right logo
-\vspace{1.5cm}
-\raggedleft\printrightlogo
-\vspace{1.5cm}
+\begin{minipage}[c]{0.25\paperwidth} % right logo
+\vspace{0.36285in}
+\raggedleft\printrightlogo\hspace{0.4925in}
+\vspace{0.29880in}
 \end{minipage}
 }
-\vspace{0.2\titleskip}
