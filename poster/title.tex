@@ -3,37 +3,26 @@
 \fcolorbox{black}{black}{
 \begin{minipage}[c]{0.75\paperwidth} % title, authors, institutes
 \ifiinst
-    \normalsize
-    \begin{spacing}{0.9} % title
-    \hspace{1.5in}\color{titlecolor}\titlesize\thetitle
-    %\vspace{-0.7\baselineskip}
-    \end{spacing}
-    \normalsize
-    \vspace{0.5in}
-    \begin{spacing}{0.2} % author
-    \hspace{1.5in}\color{titlecolor}\authorsize\theauthor
-    \end{spacing}
-    \vspace{-0.1in}
+    \begin{minipage}[c]{0.75\paperwidth} % right logo
+    \begin{textblock*}{0.75\paperwidth}(0.1in,0.0in) % title
+    \color{titlecolor}\bf\titlesize\thetitle
+    \end{textblock*}
+    \begin{textblock*}{0.75\paperwidth}(0.1in,2.8in) % title
+    \color{titlecolor}\authorsize\theauthor
+    \end{textblock*}
+    \end{minipage}
 \else
-    \normalsize
-    \begin{spacing}{0.9} % title
-    \vspace{0.7in}
-    \hspace{1.5in}\color{titlecolor}\titlesize\thetitle
-    %\vspace{-0.7\baselineskip}
-    \end{spacing}
-    \normalsize
-    \vspace{-0.15in}
-    \begin{spacing}{0.8} % author
-    \hspace{1.5in}\color{titlecolor}\authorsize\theauthor
-    %\vspace{-\baselineskip}
-    \end{spacing}
-    %\vspace{0.6\titleskip}
-    \normalsize
-    \begin{spacing}{0.5} % institute
-    \hspace{1.5in}\color{titlecolor}\instsize\theinstitute
-    %\vspace{1.3cm}
-    %\vspace{-0.5\baselineskip}
-    \end{spacing}
+    \begin{minipage}[c]{0.75\paperwidth} % right logo
+    \begin{textblock*}{0.75\paperwidth}(0.1in,0.0in) % title
+    \color{titlecolor}\bf\titlesize\thetitle
+    \end{textblock*}
+    \begin{textblock*}{0.75\paperwidth}(0.1in,2.0in) % title
+    \color{titlecolor}\authorsize\theauthor
+    \end{textblock*}
+    \begin{textblock*}{0.75\paperwidth}(0.1in,2.8in) % title
+    \color{titlecolor}\instsize\theinstitute
+    \end{textblock*}
+    \end{minipage}
 \fi
 \makeatother
 \end{minipage}
